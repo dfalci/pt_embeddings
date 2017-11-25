@@ -93,6 +93,11 @@ class W2VModel:
 
 
 if __name__ == '__main__':
-    model = W2VModel('model50.vec')
-    model.train(50, 10, 5, 5, './', 'wiki_00', 13, 2)
+    dimensions = int(sys.argv[1])
+    filename = 'model'+str(dimensions)+'.vec'
+
+    print 'treinando modelo com '+str(dimensions)
+
+    model = W2VModel(filename)
+    model.train(dimensions, 10, 5, 5, './', 'wiki_00', 13, 3)
     print 'Ended'
