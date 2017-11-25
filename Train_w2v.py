@@ -94,5 +94,5 @@ class W2VModel:
 
 if __name__ == '__main__':
     model = W2VModel('model50.vec')
-    model.train(50, 10, 5, 5, '/Users/danielfalci/development/pycharm/nlp/', 'wiki_00', 13, 2)
+    model.train(50, 10, 5, 5, './', 'wiki_00', 13, 2)
     print 'Ended'
