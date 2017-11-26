@@ -25,6 +25,9 @@ class W2VModel:
         :param inputFile:
         :return:
         """
+
+        print 'Emb : {}, epochs : {}, windowSize : {}, minimalCount : {}, threads : {}'.format(embeddingSize, epochs, windowSize, minimalCount, threads)
+
         start = time.time()
         self.inputDirectory = inputDirectory
         self.inputFile = inputFile
@@ -96,7 +99,7 @@ if __name__ == '__main__':
     dimensions = int(sys.argv[1])
     filename = 'model'+str(dimensions)+'.vec'
 
-    print 'treinando modelo com '+str(dimensions)
+    print 'output file : '+filename
 
     model = W2VModel(filename)
     model.train(dimensions, 10, 5, 5, './', 'wiki_00', 13, 3)
